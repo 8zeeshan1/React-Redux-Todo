@@ -14,13 +14,16 @@ function Task() {
 
   return (
     <div>
+      <h1>Add a task: </h1>
         <form onSubmit={(e)=>handleSubmit(e)}>
             <input
             value={task}
+            className='border w-3xl p-2 h-12'
             onChange={(e)=>setTask(e.target.value)}
             />
-            <button type='submit'>Add</button>
+            <button type='submit' className='border m-2 h-12 w-18'>Add</button>
         </form>
+        <hr/>
     </div>
   )
 }

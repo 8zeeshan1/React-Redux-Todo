@@ -7,9 +7,9 @@ const todos = useSelector(state => state.todos)
 const Dispatch = useDispatch()
 
   return (
-    <ul>
+    <ul><h1 className='p-2'>Todos</h1>
     {todos.map((todo)=>
-    <li key={todo.id}><input type="text" readOnly value={todo.text}/><button onClick={()=>Dispatch(removeTodo(todo.id))}>Delete</button></li>
+    <li key={todo.id} className='m-2'><input className='p-2' type="text" readOnly value={todo.text}/><button className='border rounded h-10 w-20' onClick={()=>Dispatch(removeTodo(todo.id))}>Delete</button></li>
   )}
   </ul>
   )
